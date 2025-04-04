@@ -52,9 +52,10 @@ const HeroSection = () => {
                 className="object-contain h-full w-full z-10 relative purple-shadow animate-float"
                 style={{
                   objectFit: 'cover',
-                  objectPosition: 'center',
+                  objectPosition: 'center top',
                   maxHeight: '100%',
-                  maxWidth: '100%'
+                  maxWidth: '100%',
+                  transform: 'translateY(30px)'
                 }}
               />
               
