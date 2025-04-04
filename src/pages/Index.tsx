@@ -6,6 +6,7 @@ import StrengthsSection from '../components/StrengthsSection';
 import AchievementsSection from '../components/AchievementsSection';
 import HistorySection from '../components/HistorySection';
 import PracticesSection from '../components/PracticesSection';
+import ShadowArmySection from '../components/ShadowArmySection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -37,6 +38,7 @@ const Index = () => {
       <HeroSection />
       <SkillsSection />
       <StrengthsSection />
+      <ShadowArmySection />
       <PracticesSection />
       <AchievementsSection />
       <HistorySection />
