@@ -50,6 +50,12 @@ const HeroSection = () => {
                 src="/lovable-uploads/f6b4efd7-f7fa-4f42-a417-3f3e881182c9.png" 
                 alt="Sung Jin-Woo" 
                 className="object-contain h-full w-full z-10 relative purple-shadow animate-float"
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  maxHeight: '100%',
+                  maxWidth: '100%'
+                }}
               />
               
               {/* Floating runes */}
