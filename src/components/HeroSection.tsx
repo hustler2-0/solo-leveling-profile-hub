@@ -42,28 +42,49 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Hero image */}
+          {/* Hero image with fire frame */}
           <div className={`relative flex justify-center items-center transform ${loaded ? 'opacity-100' : 'opacity-0'} transition-all duration-1000`}>
             <div className="relative w-80 h-96 md:w-96 md:h-[30rem] perspective">
-              <div className="absolute inset-0 hero-glow rounded-full opacity-30 animate-pulse-glow" />
-              <img 
-                src="/lovable-uploads/f6b4efd7-f7fa-4f42-a417-3f3e881182c9.png" 
-                alt="Sung Jin-Woo" 
-                className="object-contain h-full w-full z-10 relative purple-shadow animate-float"
-                style={{
-                  objectFit: 'cover',
-                  objectPosition: 'center top',
-                  maxHeight: '100%',
-                  maxWidth: '100%',
-                  transform: 'translateY(30px)'
-                }}
-              />
+              {/* Fire frame effects */}
+              <div className="absolute inset-0 rounded-2xl overflow-hidden z-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-orange-600/70 via-red-600/60 to-amber-500/50 animate-pulse opacity-70"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-red-700/60 via-orange-500/50 to-yellow-400/40 animate-pulse opacity-50" 
+                     style={{animationDelay: '300ms'}}></div>
+                
+                {/* Flame particles */}
+                <div className="absolute bottom-0 left-0 right-0 h-2/3 overflow-hidden">
+                  <div className="absolute bottom-0 left-1/4 w-2 h-16 bg-amber-500/80 rounded-full animate-float" style={{animationDuration: '2.5s'}}></div>
+                  <div className="absolute bottom-0 left-1/3 w-3 h-24 bg-orange-500/80 rounded-full animate-float" style={{animationDuration: '3s', animationDelay: '200ms'}}></div>
+                  <div className="absolute bottom-0 left-1/2 w-4 h-20 bg-red-500/80 rounded-full animate-float" style={{animationDuration: '2.7s', animationDelay: '100ms'}}></div>
+                  <div className="absolute bottom-0 left-2/3 w-3 h-16 bg-amber-400/80 rounded-full animate-float" style={{animationDuration: '3.2s', animationDelay: '300ms'}}></div>
+                  <div className="absolute bottom-0 left-3/4 w-2 h-20 bg-orange-600/80 rounded-full animate-float" style={{animationDuration: '2.8s', animationDelay: '150ms'}}></div>
+                </div>
+                
+                {/* Outer glow */}
+                <div className="absolute inset-0 rounded-2xl shadow-[0_0_40px_10px_rgba(249,115,22,0.4)]"></div>
+              </div>
               
-              {/* Floating runes */}
-              <div className="floating-rune w-10 h-10 border border-solo-purple/30 rotate-45 top-10 left-0 animate-delay-300" />
-              <div className="floating-rune w-8 h-8 border-2 border-solo-light-purple/20 -rotate-12 bottom-20 right-10 animate-delay-700" />
-              <div className="floating-rune w-6 h-6 bg-solo-purple/10 rounded-full bottom-40 left-10 animate-delay-500" />
-              <div className="floating-rune w-12 h-12 border border-solo-purple/20 rotate-12 top-32 right-5 animate-delay-200" />
+              {/* Image container with border */}
+              <div className="absolute inset-4 rounded-xl overflow-hidden border-2 border-amber-500/50 z-10 shadow-[0_0_15px_rgba(249,115,22,0.6)]">
+                <img 
+                  src="/lovable-uploads/f6b4efd7-f7fa-4f42-a417-3f3e881182c9.png" 
+                  alt="Sung Jin-Woo" 
+                  className="object-contain h-full w-full relative"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center top',
+                    maxHeight: '100%',
+                    maxWidth: '100%',
+                    transform: 'translateY(30px)'
+                  }}
+                />
+              </div>
+              
+              {/* Fire embers */}
+              <div className="floating-rune w-2 h-2 bg-yellow-300 rounded-full top-10 left-10 animate-delay-300 z-20" style={{filter: 'blur(1px)'}}></div>
+              <div className="floating-rune w-3 h-3 bg-orange-400 rounded-full bottom-20 right-10 animate-delay-700 z-20" style={{filter: 'blur(1px)'}}></div>
+              <div className="floating-rune w-2 h-2 bg-amber-300 rounded-full bottom-40 left-10 animate-delay-500 z-20" style={{filter: 'blur(1px)'}}></div>
+              <div className="floating-rune w-4 h-4 bg-red-500/70 rounded-full top-32 right-5 animate-delay-200 z-20" style={{filter: 'blur(2px)'}}></div>
             </div>
           </div>
         </div>
