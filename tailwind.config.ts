@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -148,6 +147,39 @@ export default {
 				'appear': {
 					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'image-glow': {
+					'0%': {
+						opacity: '0.5',
+						boxShadow: '0 0 20px 5px rgba(139, 92, 246, 0.5)'
+					},
+					'50%': {
+						opacity: '1',
+						boxShadow: '0 0 30px 10px rgba(139, 92, 246, 0.8)'
+					},
+					'100%': {
+						opacity: '0.5',
+						boxShadow: '0 0 20px 5px rgba(139, 92, 246, 0.5)'
+					}
+				},
+				'blue-shimmer': {
+					'0%': {
+						backgroundPosition: '0% 50%',
+						boxShadow: '0 0 15px 5px rgba(59, 130, 246, 0.5)'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%',
+						boxShadow: '0 0 25px 8px rgba(59, 130, 246, 0.7)'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%',
+						boxShadow: '0 0 15px 5px rgba(59, 130, 246, 0.5)'
+					}
+				},
+				'glimmer': {
+					'0%': { opacity: '0' },
+					'50%': { opacity: '1' },
+					'100%': { opacity: '0' }
 				}
 			},
 			animation: {
@@ -159,7 +191,10 @@ export default {
 				'pulse-intense': 'pulse-intense 3s ease-in-out infinite',
 				'shadow-pulse': 'shadow-pulse 3s infinite',
 				'rotate-slow': 'rotate-slow 20s linear infinite',
-				'appear': 'appear 0.8s ease-out forwards'
+				'appear': 'appear 0.8s ease-out forwards',
+				'image-glow': 'image-glow 3s ease-in-out infinite',
+				'blue-shimmer': 'blue-shimmer 4s ease-in-out infinite',
+				'glimmer': 'glimmer 2s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'hero-pattern': "linear-gradient(to bottom, rgba(26, 31, 44, 0.8), rgba(15, 23, 42, 0.9)), url('/public/lovable-uploads/9d7e378d-b3d8-45b1-ba68-7fe549b8c03b.png')",
