@@ -90,7 +90,7 @@ const AssassinJourneySection = () => {
           </div>
         </div>
 
-        {/* Double Dungeon Section */}
+        {/* Double Dungeon Section with NEW IMAGE */}
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-20 ${isVisible ? 'animate-appear animate-delay-300' : 'opacity-0'}`}>
           {/* Double Dungeon Journey text */}
           <div className="space-y-6 order-2 lg:order-1">
@@ -130,14 +130,14 @@ const AssassinJourneySection = () => {
             </button>
           </div>
           
-          {/* Double Dungeon Image with dramatic effects */}
+          {/* Double Dungeon Image with dramatic effects - UPDATED WITH NEW IMAGE */}
           <div className="relative rounded-lg overflow-hidden order-1 lg:order-2 group perspective transform transition-all duration-700 hover:scale-105">
             <div className="absolute inset-0 bg-gradient-to-t from-solo-dark via-transparent to-transparent z-10"></div>
             <div className="absolute -inset-0.5 bg-gradient-to-r from-solo-blue/50 via-solo-blue-glow/30 to-solo-blue/50 rounded-lg z-0 animate-blue-shimmer"></div>
             
             <div className="relative z-[1] p-1 rounded-lg overflow-hidden transform transition-all duration-500">
               <img 
-                src="/lovable-uploads/918da85c-4c7f-46fd-9d7a-1a50187f4222.png" 
+                src="/lovable-uploads/768a3c8d-4c40-4d95-b00a-7b29b3953def.png" 
                 alt="The mysterious Double Dungeon" 
                 className="rounded-lg w-full shadow-lg relative z-[2] transform transition-all duration-700 group-hover:scale-110"
               />
@@ -157,6 +157,13 @@ const AssassinJourneySection = () => {
               <div className="absolute w-2 h-2 left-1/4 top-1/4 rounded-full bg-solo-blue-glow animate-pulse-glow opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[3]"></div>
               <div className="absolute w-1.5 h-1.5 right-1/3 top-1/2 rounded-full bg-solo-blue-glow animate-pulse-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-delay-200 z-[3]"></div>
               <div className="absolute w-2.5 h-2.5 left-1/2 bottom-1/4 rounded-full bg-solo-blue-glow animate-pulse-glow opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-delay-400 z-[3]"></div>
+              
+              {/* New blue torches effect to match the image */}
+              <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-b from-solo-blue-glow/40 to-transparent z-[3] animate-pulse-slow"></div>
+              <div className="absolute w-1 h-3 top-2 left-1/5 bg-solo-blue-glow rounded-full shadow-lg shadow-solo-blue-glow/70 animate-pulse-slow z-[4]"></div>
+              <div className="absolute w-1 h-3 top-2 left-2/5 bg-solo-blue-glow rounded-full shadow-lg shadow-solo-blue-glow/70 animate-pulse-slow animate-delay-200 z-[4]"></div>
+              <div className="absolute w-1 h-3 top-2 left-3/5 bg-solo-blue-glow rounded-full shadow-lg shadow-solo-blue-glow/70 animate-pulse-slow animate-delay-300 z-[4]"></div>
+              <div className="absolute w-1 h-3 top-2 left-4/5 bg-solo-blue-glow rounded-full shadow-lg shadow-solo-blue-glow/70 animate-pulse-slow animate-delay-100 z-[4]"></div>
             </div>
           </div>
         </div>
