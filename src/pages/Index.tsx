@@ -7,6 +7,7 @@ import AchievementsSection from '../components/AchievementsSection';
 import HistorySection from '../components/HistorySection';
 import PracticesSection from '../components/PracticesSection';
 import ShadowArmySection from '../components/ShadowArmySection';
+import AssassinJourneySection from '../components/AssassinJourneySection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -36,6 +37,7 @@ const Index = () => {
     <div className="min-h-screen bg-solo-dark text-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <AssassinJourneySection />
       <SkillsSection />
       <StrengthsSection />
       <ShadowArmySection />
