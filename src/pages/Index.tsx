@@ -8,6 +8,7 @@ import PracticesSection from '../components/PracticesSection';
 import ShadowArmySection from '../components/ShadowArmySection';
 import AssassinJourneySection from '../components/AssassinJourneySection';
 import AuraSection from '../components/AuraSection';
+import UpcomingFightSection from '../components/UpcomingFightSection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -39,6 +40,7 @@ const Index = () => {
       <HeroSection />
       <AssassinJourneySection />
       <AuraSection />
+      <UpcomingFightSection />
       <SkillsSection />
       <StrengthsSection />
       <ShadowArmySection />
