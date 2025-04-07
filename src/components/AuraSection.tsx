@@ -275,8 +275,9 @@ const AuraSection = () => {
         )}
       </div>
       
-      {/* CSS for custom animations */}
-      <style jsx>{`
+      {/* Custom animations */}
+      <style>
+        {`
         @keyframes rain {
           0% {
             background-position: 0% 0%;
@@ -334,7 +335,8 @@ const AuraSection = () => {
         .shadow-glow {
           box-shadow: 0 0 10px 3px rgba(59, 130, 246, 0.7);
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
