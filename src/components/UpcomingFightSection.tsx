@@ -38,7 +38,7 @@ const UpcomingFightSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-solo-dark via-solo-dark/95 to-solo-dark"></div>
       <div className="absolute inset-0 bg-purple-glow opacity-30"></div>
       
-      {/* Additional glow orbs */}
+      {/* Additional glow orbs similar to Shadow Army */}
       <div className="absolute inset-0">
         {Array.from({ length: 5 }).map((_, i) => (
           <div 
@@ -58,6 +58,10 @@ const UpcomingFightSection = () => {
           />
         ))}
       </div>
+      
+      {/* Shadow particles similar to Shadow Army section */}
+      <div className="absolute inset-0 shadow-particles opacity-40"></div>
+      <div className="absolute inset-0 bg-radial-pattern opacity-20"></div>
       
       {/* Enhanced particle effects */}
       <div className="absolute inset-0 perspective-1000">
@@ -87,7 +91,7 @@ const UpcomingFightSection = () => {
         </div>
 
         <div className={`max-w-5xl mx-auto ${isVisible ? 'animate-appear' : 'opacity-0'}`}>
-          {/* Main battle showcase - SHORTENED HEIGHT with 3D transform effects */}
+          {/* Main battle showcase with consistent height like other sections */}
           <div 
             className="relative perspective-1000 my-12 group"
             onMouseEnter={() => setIsHovered(true)}
@@ -125,12 +129,12 @@ const UpcomingFightSection = () => {
                 </div>
               </div>
               
-              {/* Main image - HEIGHT REDUCED */}
-              <div className="relative overflow-hidden rounded-lg shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02] preserve-3d h-[400px]">
+              {/* Main image - HEIGHT ADJUSTED to match other sections, with image-glow animation */}
+              <div className="relative overflow-hidden rounded-lg shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02] preserve-3d shadow-neon-purple h-[300px]">
                 <img 
                   src="/lovable-uploads/4bb9baa0-e1af-477d-8d1e-282be3c8fb97.png" 
                   alt="Sung Jin-Woo facing a powerful enemy" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center animate-image-glow"
                 />
                 
                 {/* Enhanced image overlay for better text contrast and 3D effect */}
@@ -247,8 +251,7 @@ const UpcomingFightSection = () => {
       </div>
       
       {/* Enhanced animations */}
-      <style>
-        {`
+      <style jsx>{`
         .perspective-1000 {
           perspective: 1000px;
         }
@@ -342,8 +345,7 @@ const UpcomingFightSection = () => {
             transform: translateY(-50px) scale(0) translateZ(0px);
           }
         }
-        `}
-      </style>
+      `}</style>
     </section>
   );
 };
