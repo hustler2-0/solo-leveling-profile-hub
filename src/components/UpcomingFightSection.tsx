@@ -33,9 +33,21 @@ const UpcomingFightSection = () => {
       ref={sectionRef}
       id="upcoming-fight" 
       className="py-20 relative min-h-screen flex items-center overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(26, 31, 44, 0.8), rgba(26, 31, 44, 0.7)), url('/lovable-uploads/d4e1bfbc-142b-451c-b425-71f524a6e1a4.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-solo-dark via-solo-dark/95 to-solo-dark"></div>
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-solo-dark/80 via-solo-dark/70 to-solo-dark/80"></div>
+      
+      {/* Shadow particles effect */}
+      <div className="absolute inset-0 shadow-particles"></div>
+      
+      {/* Purple mist effect */}
+      <div className="absolute inset-0 purple-mist opacity-40"></div>
       
       {/* Particle effects */}
       <div className="absolute inset-0">
@@ -101,11 +113,11 @@ const UpcomingFightSection = () => {
             </div>
             
             {/* Main image */}
-            <div className="relative overflow-hidden rounded-lg shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02] preserve-3d">
+            <div className="relative h-96 sm:h-[450px] md:h-[500px] overflow-hidden rounded-lg shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02] preserve-3d">
               <img 
                 src="/lovable-uploads/4bb9baa0-e1af-477d-8d1e-282be3c8fb97.png" 
                 alt="Sung Jin-Woo facing a powerful enemy" 
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
               
               {/* Image overlay for better text contrast */}
