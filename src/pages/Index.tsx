@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
 import SkillsSection from '../components/SkillsSection';
-import StrengthsSection from '../components/StrengthsSection';
 import AchievementsSection from '../components/AchievementsSection';
 import PracticesSection from '../components/PracticesSection';
 import ShadowArmySection from '../components/ShadowArmySection';
@@ -42,7 +41,6 @@ const Index = () => {
       <AuraSection />
       <UpcomingFightSection />
       <SkillsSection />
-      <StrengthsSection />
       <ShadowArmySection />
       <PracticesSection />
       <AchievementsSection />
