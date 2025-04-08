@@ -82,57 +82,79 @@ const UpcomingFightSection = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {/* Smoke and glow effects container */}
-            <div className="absolute inset-0 overflow-hidden rounded-lg">
-              {/* Blue side smoke effect */}
-              <div className={`absolute inset-y-0 left-0 w-1/2 smoke-effect-blue transition-all duration-1000 ${isHovered ? 'opacity-80' : 'opacity-40'}`}></div>
+            {/* Enhanced energy aura container */}
+            <div className="absolute -inset-10 overflow-hidden rounded-lg">
+              {/* Blue aura on left side */}
+              <div className={`absolute inset-y-0 left-0 w-1/3 bg-gradient-radial from-solo-blue-glow/60 via-solo-blue-glow/30 to-transparent blur-2xl transition-opacity duration-700 ${isHovered ? 'opacity-90' : 'opacity-50'} animate-pulse-slow`}></div>
               
-              {/* Red side smoke effect */}
-              <div className={`absolute inset-y-0 right-0 w-1/2 smoke-effect-red transition-all duration-1000 ${isHovered ? 'opacity-80' : 'opacity-40'}`}></div>
+              {/* Red aura on right side */}
+              <div className={`absolute inset-y-0 right-0 w-1/3 bg-gradient-radial from-red-500/60 via-red-500/30 to-transparent blur-2xl transition-opacity duration-700 ${isHovered ? 'opacity-90' : 'opacity-50'} animate-pulse-slow`}></div>
               
-              {/* Center clash effect */}
-              <div className={`absolute inset-0 clash-effect transition-opacity duration-1000 ${isHovered ? 'opacity-90' : 'opacity-0'}`}></div>
+              {/* Center collision glow effect */}
+              <div className={`absolute inset-0 bg-gradient-radial from-white/30 via-transparent to-transparent mix-blend-screen blur-md transition-opacity duration-700 ${isHovered ? 'opacity-80' : 'opacity-40'}`}></div>
               
-              {/* White smoke particles */}
+              {/* Additional energy particles */}
               <div className="absolute inset-0">
-                {Array.from({ length: 15 }).map((_, i) => (
+                {Array.from({ length: 20 }).map((_, i) => (
                   <div 
                     key={i}
-                    className="absolute w-2 h-2 rounded-full bg-white/80 blur-md"
+                    className="absolute w-2 h-2 rounded-full"
                     style={{
                       top: `${20 + Math.random() * 60}%`,
-                      left: `${40 + Math.random() * 20}%`,
-                      opacity: isHovered ? 0.7 + Math.random() * 0.3 : 0.1 + Math.random() * 0.3,
-                      transform: 'scale(0)',
-                      animation: `smoke-rise ${3 + Math.random() * 4}s infinite ease-out`,
-                      animationDelay: `${Math.random() * 3}s`
+                      left: `${30 + Math.random() * 40}%`,
+                      backgroundColor: Math.random() > 0.5 ? 'rgba(96, 165, 250, 0.8)' : 'rgba(239, 68, 68, 0.8)',
+                      filter: 'blur(2px)',
+                      opacity: isHovered ? 0.7 + Math.random() * 0.3 : 0.3 + Math.random() * 0.3,
+                      animation: `float-enhanced ${3 + Math.random() * 4}s infinite ease-in-out`,
+                      animationDelay: `${Math.random() * 2}s`
                     }}
                   />
                 ))}
               </div>
             </div>
             
-            {/* Main image */}
-            <div className="relative h-96 sm:h-[450px] md:h-[500px] overflow-hidden rounded-lg shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02] preserve-3d">
+            {/* Main image with enhanced 3D glow effects */}
+            <div className="relative h-80 sm:h-[380px] md:h-[400px] overflow-hidden rounded-lg shadow-2xl transform transition-all duration-700 group-hover:scale-[1.02] preserve-3d">
+              {/* Glow effect behind image */}
+              <div className="absolute inset-0 bg-gradient-radial from-solo-purple/40 to-transparent opacity-60 animate-pulse-slow mix-blend-screen"></div>
+              
+              {/* New battle image */}
               <img 
-                src="/lovable-uploads/4bb9baa0-e1af-477d-8d1e-282be3c8fb97.png" 
+                src="/lovable-uploads/2e19248c-fdd0-4ad9-b0cf-ab89af400d47.png" 
                 alt="Sung Jin-Woo facing a powerful enemy" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover animate-image-glow"
               />
               
               {/* Image overlay for better text contrast */}
               <div className="absolute inset-0 bg-gradient-to-t from-solo-dark/80 to-transparent"></div>
               
-              {/* Energy beams */}
-              <div className={`absolute left-1/3 top-0 bottom-0 w-1 bg-solo-blue-glow/70 blur-sm transition-all duration-1000 ${isHovered ? 'opacity-100' : 'opacity-40'}`}></div>
-              <div className={`absolute right-1/3 top-0 bottom-0 w-1 bg-red-500/70 blur-sm transition-all duration-1000 ${isHovered ? 'opacity-100' : 'opacity-40'}`}></div>
+              {/* Blue energy glow from left character */}
+              <div className={`absolute left-1/4 top-0 bottom-0 w-1 bg-solo-blue-glow blur-md transition-all duration-700 ${isHovered ? 'opacity-100 animate-pulse-glow' : 'opacity-60'}`}></div>
               
-              {/* Glowing eyes on the right character */}
-              <div className={`absolute top-[30%] right-[27%] w-2 h-2 rounded-full bg-red-500 blur-sm transition-all duration-1000 ${isHovered ? 'animate-pulse-glow' : 'opacity-70'}`}></div>
+              {/* Red energy glow from right character */}
+              <div className={`absolute right-1/4 top-0 bottom-0 w-1 bg-red-500 blur-md transition-all duration-700 ${isHovered ? 'opacity-100 animate-pulse-glow' : 'opacity-60'}`}></div>
               
-              {/* Glowing daggers/weapons effect */}
-              <div className={`absolute top-[40%] right-[30%] w-6 h-1 rotate-45 rounded-full bg-red-500/90 blur-sm transition-all duration-1000 ${isHovered ? 'animate-pulse-glow' : 'opacity-70'}`}></div>
-              <div className={`absolute top-[42%] right-[28%] w-6 h-1 rotate-45 rounded-full bg-red-500/90 blur-sm transition-all duration-1000 ${isHovered ? 'animate-pulse-glow' : 'opacity-70'}`}></div>
+              {/* Glowing eye on the right character */}
+              <div className={`absolute top-[35%] right-[22%] w-3 h-3 rounded-full bg-red-500 blur-sm transition-all duration-700 ${isHovered ? 'animate-pulse-glow' : 'opacity-70'}`}></div>
+              
+              {/* Energy beam effect from the blade */}
+              <div className={`absolute top-[40%] left-[40%] w-20 h-2 bg-gradient-to-r from-solo-blue-glow to-white rounded-full blur-md transition-all duration-700 transform -rotate-12 ${isHovered ? 'opacity-90 animate-pulse-glow' : 'opacity-50'}`}></div>
+              
+              {/* Small energy particles */}
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div 
+                  key={i}
+                  className="absolute w-1 h-1 rounded-full bg-white blur-sm"
+                  style={{
+                    top: `${30 + Math.random() * 40}%`,
+                    left: `${35 + Math.random() * 30}%`,
+                    opacity: isHovered ? 0.8 : 0.4,
+                    transform: 'scale(0)',
+                    animation: `glimmer ${1 + Math.random() * 3}s infinite ease-in-out`,
+                    animationDelay: `${Math.random() * 2}s`
+                  }}
+                />
+              ))}
               
               {/* Battle information overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8 transform transition-transform duration-500 translate-y-0 group-hover:translate-y-[-10px]">
@@ -156,9 +178,13 @@ const UpcomingFightSection = () => {
               </div>
             </div>
             
-            {/* Floating battle elements */}
+            {/* Floating 3D elements */}
             <div className={`absolute -top-5 -left-5 w-16 h-16 rounded-full border border-solo-purple/30 transition-all duration-500 ${isHovered ? 'opacity-100 animate-rotate-slow' : 'opacity-40'}`}></div>
             <div className={`absolute -bottom-5 -right-5 w-16 h-16 rounded-full border border-red-500/30 transition-all duration-500 ${isHovered ? 'opacity-100 animate-rotate-slow' : 'opacity-40'}`}></div>
+            
+            {/* 3D rune floating elements */}
+            <div className={`absolute -top-10 left-1/4 w-12 h-12 border border-solo-blue-glow/40 rotate-45 transition-all duration-500 ${isHovered ? 'opacity-70 animate-float-enhanced' : 'opacity-30'}`}></div>
+            <div className={`absolute -bottom-10 right-1/4 w-12 h-12 border border-red-500/40 -rotate-12 transition-all duration-500 ${isHovered ? 'opacity-70 animate-float-enhanced' : 'opacity-30'}`}></div>
           </div>
           
           {/* Battle details section */}
